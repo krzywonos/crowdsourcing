@@ -5,20 +5,20 @@
 # Mandatory settings
 
 # Endpoint URL to load the output RDF
-triplestore_url: http://127.0.0.1:8805/sparql
+triplestore_url: http://127.0.0.1:19999/ds/sparql
 # A list of triplestore URLs containing provenance metadata
 provenance_endpoints: []
 # Directory where raw CSV files are stored
-input_csv_dir: /mnt/arcangelo/repositories/crowdsourcing/crowdsourcing_ingestion_data/YYYY_MM/metadata
+input_csv_dir: ../../crowdsourcing/crowdsourcing/crowdsourcing_ingestion_data/YYYY_MM/metadata
 # The path to the base directory to save all output files
-base_output_dir: &base_output_dir /mnt/arcangelo/repositories/crowdsourcing/meta_output_test
+base_output_dir: ../../crowdsourcing/crowdsourcing/meta_output_test
 # A URI string representing the provenance agent which is considered responsible for the RDF graph manipulation
-resp_agent: https://orcid.org/0000-0002-8420-0696
+resp_agent: https://orcid.org/0009-0002-5366-3687
 
 # Optional settings
 
 # Folder where RDF files are saved. Since these files are the heaviest, it is sometimes convenient to save them on HDD, while the triplestore needs to be on SSD for its efficient operation
-output_rdf_dir: *base_output_dir
+output_rdf_dir: ../../crowdsourcing/crowdsourcing/meta_output_test/rdf
 # If True, titles will be normalized (capitalized). If False, titles will be kept as-is
 normalize_titles: True
 # The base URI of entities on Meta. This setting can be safely left as is
@@ -61,5 +61,5 @@ silencer: ['author', 'editor', 'publisher']
 
 # Redis settings
 redis_host: localhost
-redis_port: 6379
+redis_port: 9669
 redis_db: 5
